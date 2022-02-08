@@ -9,8 +9,13 @@ import org.springframework.stereotype.Service;
 public class KafkaConsumer {
 
 	@KafkaListener(topics = "exam", groupId = "foo")
-	public void consume(String message) throws IOException{
-		System.out.printf("Consumed message : %s\n", message);
+	public void consumeFoo(String message) throws IOException{
+		System.out.printf("Consumed message from foo : %s\n", message);
 	}
+	
+//	@KafkaListener(topics = "exam", groupId = "baa")
+//	public void consumeBaa(String message) throws IOException{
+//		System.out.printf("Consumed message from baa : %s\n", message);
+//	}
 	
 }

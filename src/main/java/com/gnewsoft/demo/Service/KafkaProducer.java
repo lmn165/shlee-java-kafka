@@ -10,7 +10,7 @@ public class KafkaProducer {
 	private final KafkaTemplate<String, String> kafkaTemlplate;
 	
 	@Autowired
-	public KafkaProducer(KafkaTemplate kafkaTemplate) {
+	public KafkaProducer(KafkaTemplate<String, String> kafkaTemplate) {
 		this.kafkaTemlplate = kafkaTemplate;
 	}
 	

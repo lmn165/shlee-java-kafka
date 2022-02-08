@@ -13,11 +13,11 @@ public class KafkaControlerTest {
 	
 	@Test
 	public void loop() {
-		int cnt = 0;
-		while(cnt < 10) {
+		int cnt = 1;
+		while(cnt < 11) {
 			producer.sendMessage(String.format("message no - %d", cnt++));
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(5000);
 			} catch (InterruptedException e) {
 				System.out.println("error");
 			}
